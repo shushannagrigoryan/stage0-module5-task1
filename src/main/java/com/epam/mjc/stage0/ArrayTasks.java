@@ -107,8 +107,8 @@ public class ArrayTasks {
                 j++;
             }
         }
-        int [] arr2 = new int[j+1];
-        for(int k = 0; k<j+1; k++){
+        int [] arr2 = new int[j];
+        for(int k = 0; k<j; k++){
             arr2[k] = arr1[k];
         }
         return arr2;
@@ -127,13 +127,13 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
         //int min_size = arr[0].length;
-//        for(int i = 0; i< arr.length; i++){
-//            System.out.println("i_th" + i);
-//            for(int j = 0;j<arr[i].length; j++){
-//                System.out.println(arr[i][j]);
-//            }
-//
-//        }
+        for(int i = 0; i< arr.length; i++){
+            System.out.println("i_th" + i);
+            for(int j = 0;j<arr[i].length; j++){
+                System.out.println(arr[i][j]);
+            }
+
+        }
         //int min_size = arr[0].length;
         for(int i = 0; i< arr.length; i++){
             int min = arr[i][0];
@@ -173,13 +173,13 @@ public class ArrayTasks {
             }
         }
 
-//        System.out.println("new");
-//        for(int i = 0; i< arr.length; i++){
-//            System.out.println("i_th" + i);
-//            for(int j = 0;j<arr[i].length; j++){
-//                System.out.println(arr[i][j]);
-//            }
-//        }
+        System.out.println("new");
+        for(int i = 0; i< arr.length; i++){
+            System.out.println("i_th" + i);
+            for(int j = 0;j<arr[i].length; j++){
+                System.out.println(arr[i][j]);
+            }
+        }
 
     return arr;
     }
