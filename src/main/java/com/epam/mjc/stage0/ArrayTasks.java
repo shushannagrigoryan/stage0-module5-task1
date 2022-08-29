@@ -126,15 +126,6 @@ public class ArrayTasks {
      * arr = [[5, 4], [7]]       -> [[7], [4, 5]]
      */
     public int[][] sortRaggedArray(int[][] arr) {
-        //int min_size = arr[0].length;
-        for(int i = 0; i< arr.length; i++){
-            System.out.println("i_th" + i);
-            for(int j = 0;j<arr[i].length; j++){
-                System.out.println(arr[i][j]);
-            }
-
-        }
-        //int min_size = arr[0].length;
         for(int i = 0; i< arr.length; i++){
             int min = arr[i][0];
             for(int j = 0;j<arr[i].length; j++){
@@ -152,33 +143,18 @@ public class ArrayTasks {
             }
         }
 
-
-
         for(int i = 0; i< arr.length; i++){
             int min_size = arr[i].length;
             int[] arr_elem = new int[arr[i].length];
+            int k = i;
             for(int j = i+1;j<arr.length; j++){
-
-//                int index = i;
-
-
                 if(arr[j].length < min_size){
                     min_size = arr[j].length;
-
                 }
-                arr_elem = arr[i];
-                arr[i] = arr[j];
-                arr[j] = arr_elem;
-
             }
-        }
-
-        System.out.println("new");
-        for(int i = 0; i< arr.length; i++){
-            System.out.println("i_th" + i);
-            for(int j = 0;j<arr[i].length; j++){
-                System.out.println(arr[i][j]);
-            }
+            arr_elem = arr[i];
+            arr[i] = arr[k];
+            arr[k] = arr_elem;
         }
 
     return arr;
