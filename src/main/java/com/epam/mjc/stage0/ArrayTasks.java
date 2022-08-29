@@ -127,11 +127,12 @@ public class ArrayTasks {
      */
     public int[][] sortRaggedArray(int[][] arr) {
         for(int i = 0; i< arr.length; i++){
-            int min = arr[i][0];
+            //int min = arr[i][0];
             for(int j = 0;j<arr[i].length; j++){
                 int min_number = arr[i][j];
                 int index = j;
                 for(int k = j+1; k<arr[i].length; k++){
+                    //System.out.println("min_number = " + min_number);
                     if(arr[i][k] < min_number){
                         min_number = arr[i][k];
                         index = k;
@@ -144,12 +145,13 @@ public class ArrayTasks {
         }
 
         for(int i = 0; i< arr.length; i++){
+            //System.out.println("iteration " + i);
             int min_size = arr[i].length;
             //int[] arr_elem = new int[arr[i].length];
             int k = i;
             for(int j = i+1;j<arr.length; j++){
                 if(arr[j].length < min_size){
-                    //min_size = arr[j].length;
+                    min_size = arr[j].length;
                     k = j;
                 }
             }
@@ -157,7 +159,6 @@ public class ArrayTasks {
             arr[i] = arr[k];
             arr[k] = arr_elem;
         }
-
     return arr;
     }
 }
